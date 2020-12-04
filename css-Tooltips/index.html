@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 18 - Tooltips </title>
+	<link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+
+	<style>
+
+		@font-face {
+			font-family: "Benguiat Bold";
+			src: url("fonts/BenguiatBold.ttf");
+		}
+
+
+		*{
+			margin:0;
+			padding:0;
+		}
+
+		body{
+			text-align: center;
+			font-family: 'Benguiat Bold', sans-serif;
+			background-image: url('img/instruments.jpg');
+			background-size: cover;
+		}
+
+		header {
+			padding: 0.5em;
+			line-height: 2;
+			color: hsl(0,0%,100%);
+			background-color: hsla(0,0%,0%, 0.6);
+		}
+
+		h1{
+			font-size: 4em;
+			line-height: 1.5;
+		}
+
+		.casete {
+			width: 700px;
+			height: auto;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 50px;
+		}
+
+		img {
+			border-top-right-radius: 80px;
+			border-bottom-left-radius: 80px;
+			box-shadow: 
+			0px 1px 5px hsl(0, 0%, 0%, .8),
+			0px 5px 5px hsl(0, 0%, 0%, .8);
+		}
+
+		h3 {
+			font-size: 1.5em;
+		}
+
+		p{
+			font-family: 'Inconsolata', monospace;
+			font-size: 1.5em;
+			color: hsl(0, 0%, 100%);
+		}
+
+		.tooltipCancion1 {
+			background-color: hsl(0, 0%, 0%);
+			width: 225px;
+			height: 100px;
+			padding: 1em;
+			position: absolute;
+			visibility: hidden;
+			margin: -25% 15% 0;
+		}
+		
+		.tooltipCancion2 {
+			background-color: hsl(0, 0%, 0%);
+			width: 170px;
+			height: 75px;
+			padding: 1em;
+			position: absolute;
+			visibility: hidden;
+			margin: -32% 0 0 55%;
+			transition-delay: 0.1s;
+		}
+
+		.tooltipCancion3 {
+			background-color: hsl(0, 0%, 0%);
+			width: 230px;
+			height: 100px;
+			padding: 1em;
+			position: absolute;
+			visibility: hidden;
+			margin: -3% 0 0 35%;
+			transition-delay: 0.2s;
+		}
+
+		.tooltipCancion4 {
+			background-color: hsl(0, 0%, 0%);
+			width: 285px;
+			height: 75px;
+			padding: 1em;
+			position: absolute;
+			visibility: hidden;
+			margin: -3% 0 0 65%;
+			transition-delay: 0.3s;
+		}
+
+		.tooltipCancion5 {
+			background-color: hsl(0, 0%, 0%);
+			width: 235px;
+			height: 105px;
+			padding: 1em;
+			position: absolute;
+			visibility: hidden;
+			margin: -20% 0 0 69%;
+			transition-delay: 0.4s;
+		}
+
+		.casete:hover +.tooltipCancion1{
+			visibility: visible;
+		}
+
+		.casete:hover +.tooltipCancion1 +.tooltipCancion2{
+			visibility: visible;
+		}
+
+		.casete:hover +.tooltipCancion1 +.tooltipCancion2+.tooltipCancion3{
+			visibility: visible;
+		}
+
+		.casete:hover +.tooltipCancion1 +.tooltipCancion2+.tooltipCancion3+.tooltipCancion4{
+			visibility: visible;
+		}
+
+		.casete:hover +.tooltipCancion1 +.tooltipCancion2+.tooltipCancion3+.tooltipCancion4+.tooltipCancion5{
+			visibility: visible;
+		}
+		
+	</style>
+
+</head>
+<body>
+	<header>
+		<h1>Tooltip music</h1>
+		<h3>Situa el ratón encima del cassette</h3>
+	</header>
+	
+	<div class="casete">
+		<img src="img/casete.jpg" class="casete" alt="casete">
+	</div>
+
+	<!-- Tooltip-->
+	<div class="tooltipCancion1">
+		<p>"Je veux d'l'amour, d'la joie, de la bonne humeur..."</p>
+	</div>
+	<div class="tooltipCancion2">
+		<p>"¡Bailando hasta que todo acabe...!"</p>
+	</div>
+	<div class="tooltipCancion3">
+		<p>"Hell yeah baby, we're back on the map. Such a thrill the way we feel..."</p>
+	</div>
+	<div class="tooltipCancion4">
+		<p>"Perder la voz cantando una canción es la mejor medicación..."</p>
+	</div>
+	<div class="tooltipCancion5">
+		<p>"scream at me until my ears bleed
+		And I'm taking heed just for you..."</p>
+	</div>
+</body>
+</html>
